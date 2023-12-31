@@ -1,0 +1,134 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+      body, html {
+        height: 100%;
+        line-height: 1.8;
+      }
+
+      .bar {
+        width: 100%;
+        overflow: hidden;
+        white-space: normal;
+      }
+
+      .bar-block .bar-item {
+        width: 100%;
+        display: block;
+        padding: 8px 16px;
+        text-align: left;
+        border: none;
+        white-space: normal;
+        float: none;
+        outline: 0;
+      }
+
+      .bar .bar-item {
+        padding: 8px 16px;
+        float: left;
+        width: auto;
+        border: none;
+        display: block;
+        outline: 0;
+      }
+
+      .bar-item {
+        border: none;
+        display: inline-block;
+        padding: 8px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        background-color: inherit;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap
+      }
+
+      .bar-item:hover {
+        color: #000;
+        background-color: #ccc;
+      }
+
+      .bar-item:disabled {
+        cursor: not-allowed;
+        opacity: 0.3
+      }
+
+      .top {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        transition: top 0.3s;
+        z-index: 1;
+      }
+
+      .sidebar {
+        height: 100%;
+        width: 200px;
+        position: fixed !important;
+        top:0px;
+        left:0px;
+        z-index: 1;
+        overflow: auto;
+      }
+
+      .animate-left {
+        position: relative;
+        animation: animateleft 0.4s;
+      }
+
+      .box-shadow {
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19) !important;
+      }
+
+      .white-txt {
+        background-color: black !important;
+        color: white !important;
+      }
+
+      @keyframes animateleft {
+        from {
+          left: -300px;
+          opacity: 0;
+        }
+
+        to {
+          left: 0;
+          opacity: 1;
+        }
+      }
+
+      #Popup {
+        opacity: 1;
+        animation: fade 3s linear;
+        animation-iteration-count: 1;
+      }
+      @keyframes fade {
+        0%,80% { opacity: 0; }
+        10%,60% { opacity: 1; }
+      }
+
+      @media(max-width:993px) {
+        .right-sidelinks {
+          display:none;
+        }
+      }
+
+      @media (min-width:993px) {
+        .hide-large {
+          display: none !important;
+        }
+      }
+
+      @media (max-width:992px) and (min-width:601px) {
+        .hide-medium {
+          display: none;
+        }
+      }
+
+      @media (max-width:601px) {
+        .hide-small {
+          display: none;
+        }
+      }

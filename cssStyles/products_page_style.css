@@ -1,0 +1,101 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    line-height: 1.8;
+    margin: 0;
+}
+.container{
+    padding: 2em 16px;
+}
+
+.container:after,
+.container:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.a {
+    border: none;
+    display: inline-block;
+    padding: 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: white !important;
+    background-color: black !important;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.a:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.a:hover{
+    color:black !important;
+    background-color: transparent !important;
+    backdrop-filter: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.ul li {
+    padding: 8px 16px;
+}
+
+.ul li:last-child {
+    border-bottom: none;
+}
+
+.card {
+    display: inline-block;
+    width: calc(33% - 8px);
+    padding:0 8px; 
+    margin: 16px auto !important;
+}
+
+.productHeading {
+    color: white; 
+    background-color: #555c66; 
+    font-size: 24px;
+}
+.card:hover {
+    position: relative;
+    top: -20px;
+    
+}
+
+.card:hover .productHeading {
+    color: white; 
+    background-color: red; 
+    font-size: 24px; 
+    position: relative;
+}
+
+@media(max-width: 960px) {
+    .card {
+        width: 48%;
+        margin: 2px auto;
+    }
+}
+
+@media(max-width: 682px) {
+    .card {
+        width: 90%;
+        margin: 2px auto;
+    }
+}

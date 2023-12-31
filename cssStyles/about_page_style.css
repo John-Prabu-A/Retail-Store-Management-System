@@ -1,0 +1,51 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+body, html {
+height: 100%;
+line-height: 1.8;
+}
+
+.bar .button {
+padding: 16px;
+}
+
+.container{
+    padding: 2em 16px;
+}
+
+.container:after,
+.container:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+.row-padding:after,
+.row-padding:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.quarter {
+    float : left;
+    width : 100%;
+    padding: 0 8px;
+}
+
+.about-icon {
+    margin-bottom: 16px;
+    font-size: 48px !important;
+}
+
+@media (min-width:601px) {
+    .quarter {
+    width: 24.99999%;
+}
+}

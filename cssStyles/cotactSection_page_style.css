@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.container {
+    padding: 2em 16px;
+}
+
+.container:after,
+.container:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input {
+    font: inherit;
+    margin: 0;
+}
+
+.input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.border {
+    border: 1px solid #ccc !important;
+}
+
+button,
+h3 {
+    font: inherit;
+    margin: 0;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: white !important;
+    color: black !important;
+    border: none;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.grayscale {
+    filter: grayscale(75%);
+}
+
+.icon {
+    font-size: 36px;
+    margin-right: 16px;
+}
