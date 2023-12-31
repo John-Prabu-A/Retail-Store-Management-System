@@ -33,6 +33,9 @@
         <label for="quantity">Quantity</label>
         <input type="number" placeholder="Quantity" name="quantity">
 
+        <label for="productType">Product Type</label>
+        <input type="text" placeholder="Product Type" name="productType">
+
         <label for="productDescription">Product Description</label>
         <textarea style="resize: none;" rows="15" placeholder="Product Description" name="productDescription"></textarea>
 
@@ -64,7 +67,7 @@
         $sellingPrice = floatval($_POST["sellingPrice"]);
         $quantity = intval($_POST["quantity"]);
         $productDescription = mysqli_real_escape_string($con, $_POST["productDescription"]);
-
+        $productType = mysqli_real_escape_string($con, $_POST["productType"]);
         // Process uploaded image
         $productImageName = $_FILES["productImage"]["name"];
         $tempname = $_FILES["productImage"]["tmp_name"];
@@ -72,9 +75,8 @@
         move_uploaded_file($tempname, $newImageName);
 
         // Insert product details into the database
-        $sql = "INSERT INTO `Product_Details` (productName, originalPrice, sellingPrice, quantity, productDescription)
-                VALUES ('$productName', $originalPrice, $sellingPrice, $quantity, '$productDescription')";
-
+        $sql = "INSERT INTO `Product_Details` (productName, originalPrice, sellingPrice, quantity, productDescription,product_type)
+                VALUES ('$productName', $originalPrice, $sellingPrice, $quantity, '$productDescription','$productType')";
         $result = mysqli_query($con, $sql);
 
         if ($result) {
